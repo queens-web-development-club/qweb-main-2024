@@ -1,0 +1,13 @@
+@mixin gradient($direction, $list) {
+  background: -webkit-linear-gradient($direction, $list);
+  background: -moz-linear-gradient($direction, $list);
+  background: -o-linear-gradient($direction, $list);
+  background: linear-gradient($direction, $list);
+}
+
+@mixin animate($animationName, $animationTime, $properties) {
+  -webkit-animation: $animationName $animationTime $properties;
+  -moz-animation: $animationName $animationTime $properties;
+  -ms-animation: $animationName $animationTime $properties;
+  animation: $animationName $animationTime $properties;
+}

@@ -1,0 +1,82 @@
+.tech-stack-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .text {
+    margin-top: 70px;
+  }
+
+  .card-container {
+    margin: 50px 0 75px;
+
+    width: 70vw;
+
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      width: 175px;
+
+      border-radius: 15px;
+
+      display: flex;
+      justify-content: center;
+
+      padding-block: 20px;
+      margin-inline: 5px;
+
+      background-color: $qweb-light-gray;
+      transition: all 350ms ease-in-out;
+      &:hover {
+        background-color: $qweb-darker-light-gray;
+        border-radius: 0;
+      }
+    }
+
+    img {
+      height: 90px;
+    }
+  }
+
+  @media (max-width: $screen-md) {
+    .card-container {
+      margin-top: 40px;
+      margin-left: -20px;
+      .card {
+        width: 120px;
+      }
+      img {
+        height: 80px;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    margin-left: 20px;
+    .card-container {
+      flex-wrap: wrap;
+      margin: 20px 0 50px -20px;
+      justify-content: center;
+      .card {
+        max-width: 150px;
+        margin: 5px;
+      }
+      img {
+        height: 70px;
+      }
+    }
+  }
+  @media (max-width: $screen-xs) {
+    .card-container {
+      .card {
+        max-width: 100px;
+      }
+      img {
+        height: 60px;
+      }
+    }
+  }
+}

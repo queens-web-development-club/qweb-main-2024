@@ -1,0 +1,58 @@
+// Fixed side icons
+.icon-container {
+  position: fixed;
+  left: 25px;
+  bottom: 15px;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1;
+
+  img {
+    margin-block: 6px;
+    width: 45px;
+    cursor: pointer;
+    &:hover {
+      animation: floating 1s infinite ease-in-out;
+    }
+  }
+
+  @media (max-width: $screen-md) {
+    left: 15px;
+    bottom: 0;
+    img {
+      height: 40px;
+      width: 40px;
+      margin-block: 5px;
+    }
+  }
+
+  @media (max-width: $screen-sm) {
+    left: 10px;
+    img {
+      margin-block: 2px;
+    }
+  }
+
+  @media (max-width: $screen-xs) {
+    left: 3px;
+    img {
+      margin-block: 1px;
+      height: 35px;
+      height: 35px;
+    }
+  }
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -2px);
+  }
+  to {
+    transform: translate(0);
+  }
+}

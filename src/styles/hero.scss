@@ -1,0 +1,165 @@
+.hero-container {
+  background: url("../../public/brand/background.png") no-repeat;
+  background-size: cover;
+
+  margin-top: $nav-height;
+  padding-bottom: 50px;
+
+  min-height: calc(100vh - $nav-height);
+
+  width: 100vw;
+
+  position: relative;
+
+  .text-box {
+    padding-top: 75px;
+    padding-left: 150px;
+
+    h1 {
+      color: $qweb-white;
+      text-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+
+      font-size: 80px;
+      font-weight: 800;
+
+      letter-spacing: 2px;
+
+      max-width: 1000px;
+
+      position: relative;
+    }
+
+    button {
+      background-color: transparent;
+      color: $qweb-black;
+
+      border: 2px solid $qweb-black;
+
+      border-radius: 50px;
+
+      padding: 10px 35px;
+      margin-top: 30px;
+
+      font-size: 24px;
+      font-weight: 500;
+
+      transition: all 500ms linear;
+      cursor: pointer;
+      &:hover {
+        color: $qweb-light-gray;
+        border-color: $qweb-light-gray;
+        background-color: rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 0px 5px 1px $qweb-light-gray inset;
+      }
+    }
+  }
+  @media (max-width: $screen-md) {
+    .text-box {
+      padding-left: 90px;
+      h1 {
+        font-size: 62px;
+        max-width: 70vw;
+      }
+    }
+  }
+  @media (max-width: $screen-sm) {
+    h1 {
+      font-size: 62px;
+      font-weight: 600;
+    }
+  }
+  @media (max-width: $screen-xs) {
+    background-image: url("../../public/brand/qweb-background-mobile.png");
+    min-height: calc(100vh - $nav-height-mobile);
+    margin-top: $nav-height-mobile;
+    .text-box {
+      padding: 30px 0 0 52px;
+      h1 {
+        font-size: 42px;
+      }
+      button {
+        padding: 5px 20px;
+        margin-top: 10px;
+        font-size: 24px;
+      }
+    }
+
+    .ticker-wrap {
+      width: 90%;
+      margin-top: 30px;
+      height: 50px;
+      .ticker {
+        -webkit-animation-duration: 7s;
+        animation-duration: 7s;
+        -webkit-animation-name: ticker-mobile;
+        animation-name: ticker-mobile;
+        margin-top: 15px;
+        &__item {
+          padding: 50px 10px;
+          font-size: 20px;
+          font-weight: 500;
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+// Ticker tape
+
+.ticker-wrap {
+  overflow: hidden;
+  margin: 50px 0 35px;
+  width: 70vw;
+  height: 60px;
+  box-sizing: content-box;
+
+  .ticker {
+    display: inline-block;
+    $qweb-white-space: nowrap;
+    box-sizing: content-box;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: 11s;
+    animation-duration: 11s;
+    margin-top: 10px;
+
+    &__item {
+      padding: 10px 20px;
+      font-size: 28px;
+      font-weight: 500;
+      display: inline;
+    }
+  }
+}
+
+@keyframes ticker {
+  0% {
+    -webkit-transform: translate3d(90%, 0, 0);
+    transform: translate3d(90%, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker-mobile {
+  0% {
+    -webkit-transform: translate3d(10%, 0, 0);
+    transform: translate3d(35%, 0, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}

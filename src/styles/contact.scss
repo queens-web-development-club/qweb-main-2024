@@ -1,0 +1,160 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
+  padding-bottom: 100px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    width: 70vw;
+
+    margin-top: 50px;
+
+    position: relative;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+
+      width: 64%;
+
+      margin-bottom: 25px;
+
+      input {
+        border: 1.5px solid $qweb-black;
+        border-radius: 30px;
+
+        padding: 15px 20px;
+        font-size: 18px;
+        &::placeholder {
+          font-size: 16px;
+        }
+      }
+      .name {
+        width: 35%;
+        margin-right: 10px;
+      }
+      .email {
+        width: 65%;
+      }
+    }
+
+    textarea {
+      padding: 15px 20px;
+
+      width: 64%;
+
+      font-size: 18px;
+      resize: none;
+
+      margin-bottom: 25px;
+      border: 1.5px solid $qweb-black;
+      border-radius: 30px;
+      &::placeholder {
+        font-size: 16px;
+      }
+    }
+
+    .status {
+      margin: -15px 0 10px 5px;
+      width: 60vw;
+    }
+    .error {
+      color: red;
+    }
+  }
+  img {
+    position: absolute;
+    bottom: 0;
+    right: -100px;
+    width: 300px;
+  }
+
+  button {
+    width: 200px;
+
+    background-color: $qweb-blue;
+    color: $qweb-white;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    border: none;
+    border-radius: 50px;
+    padding: 15px 35px;
+
+    transition: all 500ms linear;
+    cursor: pointer;
+    &:hover {
+      background-color: #5bd06a;
+    }
+    &:disabled {
+      background-color: $qweb-gray;
+      cursor: not-allowed;
+    }
+  }
+  @media (max-width: $screen-md) {
+    padding-bottom: 50px;
+    form {
+      div,
+      textarea {
+        width: 80%;
+        .name {
+          width: 40%;
+        }
+        .email {
+          width: 60%;
+        }
+      }
+    }
+
+    img {
+      width: 175px;
+      bottom: -25px;
+    }
+  }
+  @media (max-width: $screen-sm) {
+    form {
+      margin-top: 20px;
+      input {
+        margin-block: 8px;
+      }
+      textarea {
+        width: 100%;
+        margin-top: 8px;
+        margin: 8px 0 18px;
+      }
+      div {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        .name,
+        .email {
+          width: 100%;
+        }
+      }
+    }
+    img {
+      right: -50px;
+      bottom: -40px;
+      width: 130px;
+    }
+  }
+  @media (max-width: $screen-xs) {
+    .text,
+    form {
+      margin-left: 20px;
+    }
+    img {
+      bottom: -20px;
+      right: -20px;
+      width: 70px;
+    }
+  }
+}

@@ -1,0 +1,132 @@
+@import "./variables";
+@import "./mixins";
+@import "./hero";
+@import "./navbar";
+@import "./about";
+@import "./footer";
+@import "./process";
+@import "./tech-stack";
+@import "./contact";
+@import "./projects";
+@import "./return-to-top";
+@import "./icons.scss";
+
+// Global Styles
+* {
+  font-family: $display-text;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba($qweb-white, 0);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($qweb-blue, 0.5);
+  border-radius: 15px;
+  transition: all 350s ease-in-out;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $qweb-blue;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: $nav-height;
+}
+
+.blue-text {
+  color: $qweb-blue;
+}
+
+.white-text {
+  color: $qweb-white;
+}
+
+.text {
+  width: 70vw;
+  margin-top: 50px;
+
+  .heading {
+    font-size: 38px;
+    margin: 10px 0 20px;
+    @media (max-width: $screen-sm) {
+      margin-bottom: 10px;
+      line-height: 52px;
+    }
+  }
+
+  .description {
+    font-size: 20px;
+    @media (max-width: $screen-sm) {
+      font-size: 18px;
+    }
+  }
+}
+
+// Gradient bar anim on top of certain headers
+$list: $qweb-blue, $qweb-green, $qweb-blue, $qweb-green;
+.gradient-bar {
+  height: 10px;
+  width: 130px;
+  @include gradient(45deg, $list);
+  background-size: 400% 400%;
+  @include animate(infinite-gradient, 2s, linear infinite);
+}
+
+@-webkit-keyframes infinite-gradient {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 15% 100%;
+  }
+}
+
+@-ms-keyframes infinite-gradient {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 15% 100%;
+  }
+}
+
+@-moz-keyframes infinite-gradient {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 15% 100%;
+  }
+}
+
+@keyframes infinite-gradient {
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 15% 100%;
+  }
+}
