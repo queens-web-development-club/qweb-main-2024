@@ -1,4 +1,5 @@
 .about-container {
+  background: linear-gradient(74deg, #6CDD4F 2.32%, #00767B 95.94%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,14 +12,11 @@
     margin: 50px 0 75px;
     width: 70vw;
     .card {
-      background-color: $qweb-light-blue;
       padding: 20px;
 
       width: 220px;
 
       border-radius: 15px;
-      -webkit-box-shadow: 1px 1px 15px 1px $qweb-blue;
-      box-shadow: 4px 4px 10px 1px rgba($qweb-blue, 0.6);
 
       display: flex;
       flex-direction: column;

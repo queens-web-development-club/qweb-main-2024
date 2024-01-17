@@ -4,23 +4,15 @@ export default function About() {
   return (
     <div className="about-container" id="about">
       <div className="text">
-        <h1 className="blue-text heading">about us</h1>
-        <p className="description">
-          Queen's Web Development Club is a student-run organization that
-          focuses on all aspects of web development, including design and
-          development. Our goal is to equip students with the skills and
-          knowledge required to build stunning websites through tutorials and
-          practical experience with client projects. <br />
+        <h1 className="white-text heading">{'< About Us />'}</h1>
+        <p className="white-text description">
+        Queen's Web Development Club is a student run organization that teaches students how to build websites through tutorials, workshops and real practice. For local businesses and clubs.  <br />
           <br />
-          In the fall, we offer an education series that covers a wide range of
-          topics from the very basics of web development and design. During
-          winter, our members get the opportunity to work on a client project
-          under the guidance of experienced team leads and QWeb staff to ensure
-          success.
+          QWEB members are sorted into design teams and then given a real world customer to consult with. The customer plays an integral role while iterating through the development process. Experienced members lead development teams of members of varying abilities. We do both design and coding!
         </p>
       </div>
       <div className="card-container">
-        <div className="card blue-text">
+        <div className="card white-text">
           <h2>
             <CountUp
               start={300}
@@ -33,7 +25,7 @@ export default function About() {
           </h2>
           <p>members</p>
         </div>
-        <div className="card blue-text">
+        <div className="card white-text">
           <h2>
             <CountUp
               start={0}
@@ -46,7 +38,7 @@ export default function About() {
           </h2>
           <p>projects</p>
         </div>
-        <div className="card blue-text">
+        <div className="card white-text">
           <h2>
             <CountUp
               start={1}
