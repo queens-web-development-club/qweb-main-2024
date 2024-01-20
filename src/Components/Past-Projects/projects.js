@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PAST_PROJECTS from "./constants";
+import { FaCircleChevronLeft, FaCircleChevronRight } from "react-icons/fa6";
 
 export default function Projects() {
   const [current, setCurrent] = useState(0);
@@ -28,74 +29,72 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="projects-container" id="projects">
-      <div className="text">
-        <h1 className="heading white-text">projects</h1>
-      </div>
+    <section className="projects-container" id="projects">
+      <div className="projects">
+        <div className="text">
+          <h1 className="heading white-text">{`<Projects />`}</h1>
+        </div>
 
-      {/* Using a library to help with carousel. Cannot rename class carousel-container*/}
-      <div className="carousel-container">
-        <div className="desktop-nav">
-          <div className="nav-wrapper left-wrapper">
-            <img
-              src="/brand/left_nav.png"
+        {/* Using a library to help with carousel. Cannot rename class carousel-container*/}
+        <div className="carousel-container">
+          <div className="desktop-nav">
+            <div className="nav-wrapper left-wrapper">
+              <FaCircleChevronLeft
+                className="left-arrow arrow"
+                onClick={prevSlide}
+              />
+            </div>
+            <div className="nav-wrapper right-wrapper">
+              <FaCircleChevronRight
+                className="right-arrow arrow"
+                onClick={nextSlide}
+              />
+            </div>
+          </div>
+
+          <div className="mobile-nav">
+            <FaCircleChevronLeft
               className="left-arrow arrow"
               onClick={prevSlide}
             />
-          </div>
-          <div className="nav-wrapper right-wrapper">
-            <img
-              src="/brand/right-nav.png"
+            <FaCircleChevronRight
               className="right-arrow arrow"
               onClick={nextSlide}
             />
           </div>
-        </div>
 
-        <div className="mobile-nav">
-          <img
-            src="/brand/left_nav.png"
-            className="left-arrow arrow"
-            onClick={prevSlide}
-          />
-          <img
-            src="/brand/right-nav.png"
-            className="right-arrow arrow"
-            onClick={nextSlide}
-          />
+          {PAST_PROJECTS.map((project, index) => {
+            return (
+              <div
+                className={`slide ${index === current && "active"}`}
+                key={index}
+              >
+                {index === current && (
+                  <img
+                    src={project.imageUrl}
+                    alt={project.name}
+                    className="image"
+                  />
+                )}
+              </div>
+            );
+          })}
         </div>
-
-        {PAST_PROJECTS.map((project, index) => {
-          return (
-            <div
-              className={`slide ${index === current && "active"}`}
-              key={index}
+        <div className="text-box">
+          <h1 className="white-text">{currentProject.name}</h1>
+          <p className="white-text">{currentProject.description}</p>
+          {currentProject.link !== null && (
+            <a
+              href={currentProject.link}
+              target="_blank"
+              rel="noreferrer"
+              className="white-text"
             >
-              {index === current && (
-                <img
-                  src={project.imageUrl}
-                  alt={project.name}
-                  className="image"
-                />
-              )}
-            </div>
-          );
-        })}
+              Visit Site!
+            </a>
+          )}
+        </div>
       </div>
-      <div className="text-box">
-        <h1 className="white-text">{currentProject.name}</h1>
-        <p className="white-text">{currentProject.description}</p>
-        {currentProject.link !== null && (
-          <a
-            href={currentProject.link}
-            target="_blank"
-            rel="noreferrer"
-            className="white-text"
-          >
-            Visit Site!
-          </a>
-        )}
-      </div>
-    </div>
+    </section>
   );
 }
