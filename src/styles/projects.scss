@@ -1,8 +1,6 @@
 .projects-container {
   background: linear-gradient(74deg, #6cdd4f 2.32%, #00767b 95.94%);
 
-  padding: 5rem;
-
   position: relative;
   overflow: hidden;
 
@@ -10,7 +8,7 @@
   flex-direction: column;
   align-items: center;
 
-  height: 125vh;
+  height: 100vh;
 
   .mobile-nav {
     display: none;
@@ -27,13 +25,12 @@
   }
 
   .image {
-    height: 700px;
+    height: 600px;
     object-fit: cover;
   }
 
   .text-box {
     width: 70vw;
-    margin-top: 40px;
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -77,6 +74,8 @@
   .arrow {
     cursor: pointer;
     font-size: 3rem;
+    position: absolute;
+    top: 25%;
   }
   .right-arrow {
     color: white;
@@ -130,7 +129,7 @@
       .arrow {
         position: absolute;
         font-size: 2rem;
-        top: 50%;
+        top: 45%;
       }
       .left-arrow {
         left: -150px;
@@ -164,7 +163,7 @@
       .arrow {
         position: absolute;
         font-size: 2rem;
-        top: 50%;
+        top: 45%;
       }
       .left-arrow {
         left: -150px;
@@ -199,7 +198,7 @@
       .arrow {
         position: absolute;
         font-size: 2rem;
-        top: 50%;
+        top: 45%;
       }
       .left-arrow {
         left: -100px;
@@ -262,7 +261,7 @@
       display: block;
       .arrow {
         position: absolute;
-        bottom: 40%;
+        bottom: 45%;
         height: 30px;
       }
       .left-arrow {
