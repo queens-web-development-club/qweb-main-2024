@@ -4,8 +4,8 @@ export default function About() {
   return (
     <div className="about-container" id="about">
       <div className="text">
-        <h1 className="white-text heading">{'< About Us />'}</h1>
-        <p className="white-text description">
+        <h1 className="white-text about-heading">{'< About Us />'}</h1>
+        <p className="white-text about-description">
         Queen's Web Development Club is a student run organization that teaches students how to build websites through tutorials, workshops and real practice. For local businesses and clubs.  <br />
           <br />
           QWEB members are sorted into design teams and then given a real world customer to consult with. The customer plays an integral role while iterating through the development process. Experienced members lead development teams of members of varying abilities. We do both design and coding!
