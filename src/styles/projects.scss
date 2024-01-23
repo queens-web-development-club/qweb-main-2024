@@ -1,14 +1,13 @@
 .projects-container {
   background: linear-gradient(74deg, #6cdd4f 2.32%, #00767b 95.94%);
 
-  position: relative;
+  padding-bottom: 75px;
+
   overflow: hidden;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  height: 92vh;
 
   .mobile-nav {
     display: none;
@@ -19,9 +18,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    height: 100%;
     position: relative;
-    margin-top: -2rem;
+    margin-top: 3rem;
   }
 
   .image {
@@ -34,15 +32,13 @@
     display: flex;
     text-align: center;
     flex-direction: column;
+    margin-top: 5rem;
+    gap: 1rem;
 
     h1 {
       font-size: 40px;
     }
 
-    p {
-      margin-block: 10px;
-      font-size: 30px;
-    }
     a {
       font-size: 16px;
       font-weight: bold;
@@ -75,7 +71,7 @@
     cursor: pointer;
     font-size: 3rem;
     position: absolute;
-    top: 25%;
+    top: 50%;
   }
   .right-arrow {
     color: white;
@@ -91,17 +87,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
     position: absolute;
-    bottom: -50px;
   }
   .left-wrapper {
     left: -260px;
-    top: 300px;
+    top: 100px;
   }
   .right-wrapper {
     right: -260px;
-    top: 300px;
+    top: 100px;
   }
 
   .slide {
@@ -118,8 +112,6 @@
   }
 
   @media (max-width: 1800px) {
-    height: 92vh;
-
     .desktop-nav {
       display: none;
     }
@@ -145,7 +137,7 @@
     }
 
     .text-box {
-      margin-top: 0;
+      margin-top: 5rem;
       h1 {
         font-size: 28px;
       }
@@ -153,7 +145,6 @@
   }
 
   @media (max-width: 1500px) {
-    height: 92vh;
     .desktop-nav {
       display: none;
     }
@@ -179,7 +170,7 @@
     }
 
     .text-box {
-      margin-top: 0;
+      margin-top: 5rem;
       h1 {
         font-size: 28px;
       }
@@ -187,8 +178,6 @@
   }
 
   @media (max-width: 1200px) {
-    height: 92vh;
-
     .desktop-nav {
       display: none;
     }
@@ -214,7 +203,7 @@
     }
 
     .text-box {
-      margin-top: 0;
+      margin-top: 5rem;
       h1 {
         font-size: 28px;
       }
@@ -222,8 +211,6 @@
   }
 
   @media (max-width: $screen-md) {
-    height: 80vh;
-
     .image {
       height: 260px;
     }
@@ -278,7 +265,7 @@
     }
 
     .text-box {
-      margin-top: 0;
+      margin-top: 5rem;
       h1 {
         font-size: 28px;
       }

@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import "./variables";
 @import "./mixins";
 @import "./hero";
@@ -65,8 +69,7 @@ html {
 }
 
 .text {
-  width: 70vw;
-  margin-top: 50px;
+  width: 80vw;
 
   .heading {
     font-size: 38px;
