@@ -8,7 +8,7 @@
   flex-direction: column;
   align-items: center;
 
-  height: 100vh;
+  height: 92vh;
 
   .mobile-nav {
     display: none;
@@ -118,7 +118,7 @@
   }
 
   @media (max-width: 1800px) {
-    height: 110vh;
+    height: 92vh;
 
     .desktop-nav {
       display: none;
@@ -140,7 +140,7 @@
     }
 
     .image {
-      max-width: 1200px;
+      max-width: 1100px;
       height: auto;
     }
 
@@ -153,7 +153,7 @@
   }
 
   @media (max-width: 1500px) {
-    height: 100vh;
+    height: 92vh;
     .desktop-nav {
       display: none;
     }
@@ -187,7 +187,7 @@
   }
 
   @media (max-width: 1200px) {
-    height: 90vh;
+    height: 92vh;
 
     .desktop-nav {
       display: none;
