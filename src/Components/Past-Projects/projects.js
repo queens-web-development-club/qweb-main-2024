@@ -29,7 +29,7 @@ export default function Projects() {
 
   return (
     <div className="projects-container">
-      <div className="text mt-[2rem] ml-[10rem] min-[1800px]:ml-[35rem]">
+      <div className="text mt-[3rem] xl:mt-[5rem] ml-[7rem] xl:ml-[15rem] min-[1800px]:ml-[25rem]">
         <h1 className="heading white-text text-base 2xl:text-[40px]">
           {"<Projects/>"}
         </h1>
