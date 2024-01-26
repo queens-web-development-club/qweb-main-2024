@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className="nav-container">
       <a href="#top">
-        <img src="/brand/qweb-text-black.png" className="logo" />
+        <img src="/brand/qweb-text-white.png" className="logo" />
       </a>
       <div className={`link-container ${!isCollapsed && "open"}`}>
         <h1>
@@ -19,8 +19,13 @@ export default function Navbar() {
           </a>
         </h1>
         <h1>
-          <a href="#contact" onClick={() => setIsCollapsed(!isCollapsed)}>
-            contact us
+          <a href="#meet-the-team" onClick={() => setIsCollapsed(!isCollapsed)}>
+            meet the team
+          </a>
+        </h1>
+        <h1>
+          <a href="#sponsorship" onClick={() => setIsCollapsed(!isCollapsed)}>
+            sponsorship
           </a>
         </h1>
       </div>

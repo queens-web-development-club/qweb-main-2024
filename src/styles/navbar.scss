@@ -5,16 +5,19 @@
   top: 0;
   width: 100%;
   height: $nav-height;
-  background-color: $qweb-white;
+  background-color: $qweb-dark-blue;
   align-items: center;
   h1 {
     font-size: 26px;
-    font-weight: 700;
-    margin-inline: 50px;
+    font-weight: 40;
+    margin-inline: 70px;
     transition: color 350ms ease-in-out;
     cursor: pointer;
+    color: $qweb-white;
     &:hover {
-      color: $qweb-blue;
+      background: $qweb-gradient-1;
+      background-clip: text;
+      color: transparent;
     }
   }
   .link-container {
