@@ -8,6 +8,7 @@ import TechStack from "@/Components/tech-stack";
 import Contact from "@/Components/contact-us";
 import Projects from "@/Components/Past-Projects/projects";
 import Icons from "@/Components/icons";
+import Events from "@/Components/events";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Hero />
+      <Events />
       <About />
       <Process />
       <TechStack />
