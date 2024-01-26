@@ -28,9 +28,11 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="projects-container" id="projects">
-      <div className="text">
-        <h1 className="heading white-text">projects</h1>
+    <div className="projects-container">
+      <div className="text mt-[3rem] xl:mt-[5rem] ml-[7rem] xl:ml-[15rem] min-[1800px]:ml-[25rem]">
+        <h1 className="heading white-text text-base 2xl:text-[40px]">
+          {"<Projects/>"}
+        </h1>
       </div>
 
       {/* Using a library to help with carousel. Cannot rename class carousel-container*/}
@@ -84,7 +86,9 @@ export default function Projects() {
       </div>
       <div className="text-box">
         <h1 className="white-text">{currentProject.name}</h1>
-        <p className="white-text">{currentProject.description}</p>
+        <p className="white-text text-sm md:text-[20px] xl:text-[25px] 2xl:text-[30px] leading-6 md:leading-8">
+          {currentProject.description}
+        </p>
         {currentProject.link !== null && (
           <a
             href={currentProject.link}

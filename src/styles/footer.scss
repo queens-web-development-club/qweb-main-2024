@@ -2,12 +2,7 @@
   position: relative;
   .footer {
     height: 75px;
-    background: rgb(1, 140, 240);
-    background: linear-gradient(
-      90deg,
-      rgba(1, 140, 240, 1) 0%,
-      rgba(109, 222, 80, 1) 100%
-    );
+    background: $qweb-gradient-2;
     display: flex;
     align-items: center;
     justify-content: center;
