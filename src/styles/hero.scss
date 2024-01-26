@@ -89,21 +89,21 @@
       }
     }
   }
-  // @media (max-width: $screen-md) {
-  //   .text-box {
-  //     padding-left: 90px;
-  //     h1 {
-  //       font-size: 62px;
-  //       max-width: 70vw;
-  //     }
-  //   }
-  // }
-  // @media (max-width: $screen-sm) {
-  //   h1 {
-  //     font-size: 62px;
-  //     font-weight: 600;
-  //   }
-  // }
+  @media (max-width: $screen-md) {
+    .text-box {
+      padding-left: 90px;
+      h1 {
+        font-size: 62px;
+        max-width: 70vw;
+      }
+    }
+  }
+  @media (max-width: $screen-sm) {
+    h1 {
+      font-size: 62px;
+      font-weight: 600;
+    }
+  }
   @media (max-width: $screen-xs) {
     .hero-container {
       background-color: $qweb-dark-blue;

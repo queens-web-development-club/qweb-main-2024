@@ -72,7 +72,7 @@
       margin-block: 10px;
     }
 
-    height: $nav-height-mobile;
+    // height: $nav-height-mobile;
 
     .hamburger,
     .arrow {
@@ -90,7 +90,7 @@
 
     .open {
       display: block !important;
-      background-color: $qweb-white;
+      background-color: $qweb-dark-blue;
 
       position: absolute;
       top: $nav-height-mobile;
