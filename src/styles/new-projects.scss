@@ -7,10 +7,12 @@
     align-items: center;
     justify-content: flex-start;
     position: relative;
+    padding-bottom: 40px;
 }
 .nprojects-heading {
     margin-top: 150px;
     font-size: 64px;
+    padding-bottom: 40px;
     text-align: center;
     background-image: linear-gradient(#6CDD4F, #00767B);
     -webkit-background-clip: text;
@@ -18,35 +20,45 @@
     color: transparent;
     display: inline-block;
     h1 {
+        
         text-align: center;
     }
 }
 .nprojects-img {
     border-radius: 20px;
-    border: 1px green solid;
     position: absolute;
 }
+
 .nprojects-name {
 
     width: 660px;
     background-image: linear-gradient(to left, #6CDD4F, #00767B);
     border-radius: 20px;
-    border: 1px green solid;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: center;
 }
 .p-box {
+    width: 660px;
+    margin-top: 378px;
+    font-weight: bold;
+    padding: 40px;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
 }
 .npadding {
     width: 540px;
-    margin-top: 390px;
-    margin-left: 20px;
+    font-size: 27px;
+}
+.arrow {
     font-size: 32px;
     font-weight: bold;
+    transform: rotate(180deg);
+    filter: invert(100%);
+    transition: 'transform 0.2s ease';
+    transform: rotate(180deg);
 }
 .nprojects-p {
     width: 1438px;
@@ -55,14 +67,9 @@
     gap: 37px;
 }
 .nproject-description {
-    font-size: 30px;
-    margin-top: 20px;
-    margin-left: 20px;
+    font-size: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    
 }
-.pexpand-arrow {
-    // right: 10px; /* Adjust as needed */
-    // top: 50%;
-
-    transform: translateY(-50%); /* Center the button vertically */
-    cursor: pointer;
-  }
