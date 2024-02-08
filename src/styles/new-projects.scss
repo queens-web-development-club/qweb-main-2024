@@ -1,0 +1,68 @@
+.nprojects-container {
+    background-color: #1E1E1E;
+    width: 100%;
+    min-height: calc(100vh - $nav-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+.nprojects-heading {
+    margin-top: 150px;
+    font-size: 64px;
+    text-align: center;
+    background-image: linear-gradient(#6CDD4F, #00767B);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    h1 {
+        text-align: center;
+    }
+}
+.nprojects-img {
+    border-radius: 20px;
+    border: 1px green solid;
+    position: absolute;
+}
+.nprojects-name {
+
+    width: 660px;
+    background-image: linear-gradient(to left, #6CDD4F, #00767B);
+    border-radius: 20px;
+    border: 1px green solid;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.p-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.npadding {
+    width: 540px;
+    margin-top: 390px;
+    margin-left: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+.nprojects-p {
+    width: 1438px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px;
+}
+.nproject-description {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.pexpand-arrow {
+    // right: 10px; /* Adjust as needed */
+    // top: 50%;
+
+    transform: translateY(-50%); /* Center the button vertically */
+    cursor: pointer;
+  }
