@@ -27,8 +27,8 @@ export default function Home() {
       </Head>
       <Navbar />
       <Hero />
-      <Events />
       <About />
+      <Events />
       <Process />
       <TechStack />
       <Projects />
