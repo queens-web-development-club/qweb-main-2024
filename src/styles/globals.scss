@@ -1,4 +1,6 @@
-@import 'tailwindcss/base'; @import 'tailwindcss/components'; @import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 @import "./variables";
 @import "./mixins";
 @import "./hero";
@@ -70,7 +72,7 @@ html {
   width: 80vw;
 
   .heading {
-    font-size: 38px;
+    font-size: 40px;
     margin: 10px 0 20px;
     @media (max-width: $screen-sm) {
       margin-bottom: 10px;
@@ -94,6 +96,14 @@ $list: $qweb-blue, $qweb-green, $qweb-blue, $qweb-green;
   @include gradient(45deg, $list);
   background-size: 400% 400%;
   @include animate(infinite-gradient, 2s, linear infinite);
+}
+
+//gradient text
+.gradient-text {
+  background: linear-gradient(90deg, #6cdd4f 0%, #22a2ff 55%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 @-webkit-keyframes infinite-gradient {
