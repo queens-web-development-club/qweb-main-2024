@@ -14,7 +14,7 @@ export default function Navbar() {
           </a>
         </h1>
         <h1>
-          <a href="#projects" onClick={() => setIsCollapsed(!isCollapsed)}>
+          <a href="/projects" onClick={() => setIsCollapsed(!isCollapsed)}>
             projects
           </a>
         </h1>

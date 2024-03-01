@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
 @import "./variables";
 @import "./mixins";
 @import "./hero";
@@ -14,6 +15,7 @@
 @import "./return-to-top";
 @import "./icons.scss";
 @import "./events.scss";
+@import "./new-projects.scss";
 
 // Global Styles
 * {
