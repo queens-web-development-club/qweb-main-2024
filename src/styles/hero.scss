@@ -1,23 +1,57 @@
 .hero-container {
-  background: url("../../public/brand/background.png") no-repeat;
+  background-color: $qweb-dark-blue;
   background-size: cover;
 
   margin-top: $nav-height;
-  padding-bottom: 50px;
 
   min-height: calc(100vh - $nav-height);
 
   width: 100vw;
 
   position: relative;
+  
+  .bottom-left-image {
+    width: 1024.52px;
+    height: 725.12px;
+    bottom: 0;
+    right: 0;
+    background-image: url('../../public/brand/left\ top\ blob.png');
+    background-size: cover;
+  }
+
+  .top-right-image {
+    width: 648px;
+    height: 907px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url('../../public/brand/right\ top\ blob.png'); 
+    background-size: cover;
+  }
 
   .text-box {
     padding-top: 75px;
-    padding-left: 150px;
+
+    h3 {
+      color: $qweb-white;
+      font-size: 30px;
+      font-weight: 200;
+
+      letter-spacing: 2px;
+
+      max-width: 1000px;
+
+      position: relative;
+
+      padding: 1rem;
+      
+      padding-left: 80px;
+    }
 
     h1 {
-      color: $qweb-white;
-      text-shadow: 5px 8px 10px rgba(0, 0, 0, 0.5);
+      background: $qweb-gradient-1;
+      background-clip: text;
+      color: transparent;
 
       font-size: 80px;
       font-weight: 800;
@@ -27,13 +61,13 @@
       max-width: 1000px;
 
       position: relative;
+
+      padding-left: 75px;
     }
 
     button {
-      background-color: transparent;
-      color: $qweb-black;
-
-      border: 2px solid $qweb-black;
+      background: $qweb-gradient-2;
+      color: $qweb-white;
 
       border-radius: 50px;
 
@@ -41,7 +75,9 @@
       margin-top: 30px;
 
       font-size: 24px;
-      font-weight: 500;
+      font-weight: 500; 
+
+      margin-left: 75px;
 
       transition: all 500ms linear;
       cursor: pointer;
@@ -53,113 +89,69 @@
       }
     }
   }
-  @media (max-width: $screen-md) {
-    .text-box {
-      padding-left: 90px;
-      h1 {
-        font-size: 62px;
-        max-width: 70vw;
-      }
-    }
-  }
-  @media (max-width: $screen-sm) {
-    h1 {
-      font-size: 62px;
-      font-weight: 600;
-    }
-  }
+  // @media (max-width: $screen-md) {
+  //   .text-box {
+  //     padding-left: 90px;
+  //     h1 {
+  //       font-size: 62px;
+  //       max-width: 70vw;
+  //     }
+  //   }
+  // }
+  // @media (max-width: $screen-sm) {
+  //   h1 {
+  //     font-size: 62px;
+  //     font-weight: 600;
+  //   }
+  // }
   @media (max-width: $screen-xs) {
-    background-image: url("../../public/brand/qweb-background-mobile.png");
-    min-height: calc(100vh - $nav-height-mobile);
-    margin-top: $nav-height-mobile;
-    .text-box {
-      padding: 30px 0 0 52px;
-      h1 {
-        font-size: 42px;
+    .hero-container {
+      background-color: $qweb-dark-blue;
+      min-height: calc(100vh - $nav-height-mobile);
+      margin-top: $nav-height-mobile;
+  
+      .bottom-left-image,
+      .top-right-image {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 50vh;
+        object-fit: cover;
       }
-      button {
-        padding: 5px 20px;
-        margin-top: 10px;
-        font-size: 24px;
+  
+      .bottom-left-image {
+        bottom: 0;
+        right: 0;
+        background-image: none;
       }
-    }
-
-    .ticker-wrap {
-      width: 90%;
-      margin-top: 30px;
-      height: 50px;
-      .ticker {
-        -webkit-animation-duration: 7s;
-        animation-duration: 7s;
-        -webkit-animation-name: ticker-mobile;
-        animation-name: ticker-mobile;
-        margin-top: 15px;
-        &__item {
-          padding: 50px 10px;
-          font-size: 20px;
-          font-weight: 500;
-          display: inline;
+  
+      .top-right-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: none;
+      }
+  
+      .text-box {
+        padding: 30px 0 0 52px;
+  
+        h3 {
+          font-size: 30px;
+          padding-left: 0;
+        }
+  
+        h1 {
+          font-size: 42px;
+          padding-left: 0;
+        }
+  
+        button {
+          padding: 5px 20px;
+          margin-top: 10px;
+          font-size: 24px;
         }
       }
     }
   }
-}
-
-// Ticker tape
-
-.ticker-wrap {
-  overflow: hidden;
-  margin: 50px 0 35px;
-  width: 70vw;
-  height: 60px;
-  box-sizing: content-box;
-
-  .ticker {
-    display: inline-block;
-    $qweb-white-space: nowrap;
-    box-sizing: content-box;
-
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-name: ticker;
-    animation-name: ticker;
-    -webkit-animation-duration: 11s;
-    animation-duration: 11s;
-    margin-top: 10px;
-
-    &__item {
-      padding: 10px 20px;
-      font-size: 28px;
-      font-weight: 500;
-      display: inline;
-    }
-  }
-}
-
-@keyframes ticker {
-  0% {
-    -webkit-transform: translate3d(90%, 0, 0);
-    transform: translate3d(90%, 0, 0);
-    visibility: visible;
-  }
-
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
-}
-
-@keyframes ticker-mobile {
-  0% {
-    -webkit-transform: translate3d(10%, 0, 0);
-    transform: translate3d(35%, 0, 0);
-    visibility: visible;
-  }
-
-  100% {
-    -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
-  }
+  
 }

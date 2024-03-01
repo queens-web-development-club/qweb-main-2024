@@ -1,43 +1,43 @@
 .tech-stack-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   position: relative;
-
+  background-color: $qweb-dark-blue;
+  height: calc(100vh - 100px);
+  gap: 2rem;
   .text {
-    margin-top: 70px;
+    margin-top: 3rem;
   }
 
   .card-container {
-    margin: 50px 0 75px;
+    margin-top: 6rem;
 
     width: 70vw;
 
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    gap: 1rem;
     .card {
       width: 175px;
 
       border-radius: 15px;
 
       display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
       justify-content: center;
 
       padding-block: 20px;
       margin-inline: 5px;
 
-      background-color: $qweb-light-gray;
       transition: all 350ms ease-in-out;
-      &:hover {
-        background-color: $qweb-darker-light-gray;
-        border-radius: 0;
-      }
     }
 
     img {
-      height: 90px;
+      height: 100px;
     }
   }
 
@@ -54,12 +54,13 @@
     }
   }
 
-  @media (max-width: $screen-sm) {
+  @media (max-width: 900px) {
     margin-left: 20px;
     .card-container {
       flex-wrap: wrap;
       margin: 20px 0 50px -20px;
       justify-content: center;
+      gap: 0;
       .card {
         max-width: 150px;
         margin: 5px;

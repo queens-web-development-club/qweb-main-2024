@@ -1,0 +1,46 @@
+.title-text {
+  background: linear-gradient(90deg, #6CDD4F 0%, #22A2FF 49.94%, #00767B 49.94%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s;
+    transform: scale(0.98);
+    will-change: transform;
+}
+
+.hide-scroll.active {
+  cursor: grabbing;
+  transform: scale(1);
+}
+
+.card-hover {
+  transition: all 250ms ease-in-out;
+  
+  &:hover {
+    box-shadow: 0 4px 1rem -4px #000;
+    transform: translateY(-30px);
+  }
+}
+
+.card-bg-green {
+  background: linear-gradient(150deg, #6CDD4F 0%, #00767B 79.77%);
+}
+
+.card-bg-blue {
+  background: linear-gradient(150deg, #00767B 0%, #003048 79.77%);
+}
+
+
+
