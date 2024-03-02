@@ -4,12 +4,12 @@ export default function Navbar() {
   const [isCollapsed, setIsCollapsed] = useState(true);
   return (
     <div className="nav-container">
-      <a href="#top">
+      <a href="/">
         <img src="/brand/qweb-text-white.png" className="logo" />
       </a>
       <div className={`link-container ${!isCollapsed && "open"}`}>
         <h1>
-          <a href="#about" onClick={() => setIsCollapsed(!isCollapsed)}>
+          <a href="/#about" onClick={() => setIsCollapsed(!isCollapsed)}>
             about us
           </a>
         </h1>
@@ -19,12 +19,12 @@ export default function Navbar() {
           </a>
         </h1>
         <h1>
-          <a href="#meet-the-team" onClick={() => setIsCollapsed(!isCollapsed)}>
+          <a href="/#meet-the-team" onClick={() => setIsCollapsed(!isCollapsed)}>
             meet the team
           </a>
         </h1>
         <h1>
-          <a href="#sponsorship" onClick={() => setIsCollapsed(!isCollapsed)}>
+          <a href="/#sponsorship" onClick={() => setIsCollapsed(!isCollapsed)}>
             sponsorship
           </a>
         </h1>
