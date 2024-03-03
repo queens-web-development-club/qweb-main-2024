@@ -21,7 +21,7 @@ export default function Team({ title }) {
           return (
             <div
               onClick={() => toggleDescription(item.name)}
-              className={`w-[355px] p-[1rem] text-white rounded-md cursor-pointer card relative ${
+              className={`w-[355px] p-[1rem] text-white rounded-md cursor-pointer card relative z-10 ${
                 item.exec ? "gradient-bg" : "dgradient-bg"
               }`}
               key={key}
