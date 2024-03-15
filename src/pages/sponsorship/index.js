@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Navbar from "@/Components/navbar";
 import Sponsorship from "@/Components/sponsorship";
+import SponsorshipHero from "@/Components/sponsorship-hero";
 
 import Footer from "@/Components/footer";
 import Icons from "@/Components/icons";
@@ -21,6 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+      <SponsorshipHero />
       <Sponsorship />
       <Footer />
     </>

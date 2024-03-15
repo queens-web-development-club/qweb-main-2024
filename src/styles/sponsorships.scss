@@ -1,7 +1,7 @@
 .sponsorship-container {
     background-color: #1E1E1E;
     width: 100%;
-    min-height: calc(100vh - $nav-height);
+    // min-height: calc(100vh - $nav-height);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,4 +40,8 @@
 .sponsorship-logo {
     background: linear-gradient(74deg, #6CDD4F 2.32%, #00767B 95.94%);
     height: 200px;
+}
+
+.sponsorship-square-bg {
+    background: linear-gradient(225deg, #6CDD4F 2.32%, #00767B 95.94%);
 }

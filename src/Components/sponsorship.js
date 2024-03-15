@@ -7,9 +7,7 @@ export default function Sponsorship() {
 
 
   return (
-    <div className="sponsorship-container">
-        <h1 className="sponsorship-heading">{'< Sponsorships />'}</h1>
-        
+    <div className="sponsorship-container">        
         <div className="flex flex-col gap-[24px] w-full">
             <CompanySlider cards={company} slideLeft={true} />
         </div>
