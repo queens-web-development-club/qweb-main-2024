@@ -30,8 +30,8 @@ export default function Projects() {
   return (
     <div className="projects-container">
       <div className="text mt-[3rem] xl:mt-[5rem] ml-[7rem] xl:ml-[15rem] min-[1800px]:ml-[25rem]">
-        <h1 className="heading white-text text-base 2xl:text-[40px]">
-          {"<Projects/>"}
+        <h1 className="heading white-text text-base 2xl:text-[40px] font-bold">
+          {"<Projects />"}
         </h1>
       </div>
 
@@ -40,14 +40,14 @@ export default function Projects() {
         <div className="desktop-nav">
           <div className="nav-wrapper left-wrapper">
             <img
-              src="/brand/left_nav.png"
+              src="/brand/right-nav.png"
               className="left-arrow arrow"
               onClick={prevSlide}
             />
           </div>
           <div className="nav-wrapper right-wrapper">
             <img
-              src="/brand/right-nav.png"
+              src="/brand/left_nav.png"
               className="right-arrow arrow"
               onClick={nextSlide}
             />
@@ -56,12 +56,12 @@ export default function Projects() {
 
         <div className="mobile-nav">
           <img
-            src="/brand/left_nav.png"
+            src="/brand/right-nav.png"
             className="left-arrow arrow"
             onClick={prevSlide}
           />
           <img
-            src="/brand/right-nav.png"
+            src="/brand/left_nav.png"
             className="right-arrow arrow"
             onClick={nextSlide}
           />

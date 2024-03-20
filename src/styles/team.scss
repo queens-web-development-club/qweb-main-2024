@@ -1,0 +1,44 @@
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #001220;
+
+  .tHead {
+    background-image: linear-gradient(to left, #6cdd4f, #00767b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    padding-top: 10rem;
+    text-align: center;
+  }
+  .gradient-bg {
+    background: linear-gradient(
+      100deg,
+      rgba(108, 221, 79, 1) 0%,
+      rgba(0, 118, 123, 1) 150%
+    );
+  }
+  .dgradient-bg {
+    background: linear-gradient(
+      100deg,
+      rgba(0, 118, 123, 1) 0%,
+      rgba(0, 48, 72, 1) 150%
+    );
+  }
+
+  .card{
+    transform-style: preserve-3d;
+    transition: all 1s ease;
+  }
+
+  .front-card{
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+
+  .back-card{
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
+}
