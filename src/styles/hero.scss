@@ -89,21 +89,7 @@
       }
     }
   }
-  // @media (max-width: $screen-md) {
-  //   .text-box {
-  //     padding-left: 90px;
-  //     h1 {
-  //       font-size: 62px;
-  //       max-width: 70vw;
-  //     }
-  //   }
-  // }
-  // @media (max-width: $screen-sm) {
-  //   h1 {
-  //     font-size: 62px;
-  //     font-weight: 600;
-  //   }
-  // }
+  
   @media (max-width: $screen-xs) {
     .hero-container {
       background-color: $qweb-dark-blue;
@@ -112,24 +98,15 @@
   
       .bottom-left-image,
       .top-right-image {
-        width: 100%;
-        height: auto;
-        max-width: 100%;
-        max-height: 50vh;
-        object-fit: cover;
+        visibility: hidden;
       }
   
       .bottom-left-image {
-        bottom: 0;
-        right: 0;
-        background-image: none;
+        visibility: hidden;
       }
   
       .top-right-image {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-image: none;
+        visibility: hidden;
       }
   
       .text-box {
