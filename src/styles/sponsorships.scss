@@ -1,0 +1,47 @@
+.sponsorship-container {
+    background-color: #1E1E1E;
+    width: 100%;
+    // min-height: calc(100vh - $nav-height);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-bottom: 40px;
+}
+.sponsorship-heading {
+    margin-top: 150px;
+    font-size: 64px;
+    font-weight: 600;
+    padding-bottom: 40px;
+    text-align: center;
+    background-image: linear-gradient(to left, #6CDD4F, #00767B);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    h1 {
+        text-align: center;
+    }
+    @media (max-width: $screen-lg) {
+        font-size: 54px;
+    }
+    @media (max-width: $screen-md) {
+        font-size: 44px;
+    }
+    @media (max-width: $screen-sm) {
+        font-size: 40px;
+    }
+    @media (max-width: $screen-xs) {
+        font-size: 37px;
+        margin-top: 100px;
+    }
+}
+.sponsorship-logo {
+    background: linear-gradient(74deg, #6CDD4F 2.32%, #00767B 95.94%);
+    height: 200px;
+}
+
+.sponsorship-square-bg {
+    background: linear-gradient(225deg, #6CDD4F 2.32%, #00767B 95.94%);
+}

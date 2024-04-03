@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Navbar() {
   const [isCollapsed, setIsCollapsed] = useState(true);
   return (
-    <div className="nav-container ">
+    <div className="nav-container z-[99]">
       <a href="/">
         <img src="/brand/qweb-text-white.png" className="logo" />
       </a>
@@ -24,7 +24,7 @@ export default function Navbar() {
           </a>
         </h1>
         <h1>
-          <a href="/#sponsorship" onClick={() => setIsCollapsed(!isCollapsed)}>
+          <a href="/sponsorship" onClick={() => setIsCollapsed(!isCollapsed)}>
             sponsorship
           </a>
         </h1>
