@@ -17,6 +17,7 @@ export default function meet() {
             sizes="100vw"
             alt="team photo"
             priority={true}
+            className="z-[10]"
           />
         </section>
         {roles.map((item, key) => {
@@ -26,7 +27,7 @@ export default function meet() {
           src={"/meetblob/blob1.svg"}
           width={500}
           height={500}
-          className="absolute left-0 top-[3%]"
+          className="absolute left-0 top-[3%] max-xl:top-[10%]"
         />
         <Image
           src={"/meetblob/blob2.svg"}
