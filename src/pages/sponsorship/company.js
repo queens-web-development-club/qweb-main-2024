@@ -5,79 +5,104 @@ import REDBULL from "../../../public/sponsors/Redbull.png";
 import QUEENS from "../../../public/sponsors/Queens.png";
 
 export const company = [
-    {
-        image: COMPSA,
-    },
-    {
-        image: DDQIC,
-    },
-    {
-        image: QUEENS,
-    },
-    {
-        image: GITHUB,
-    },
-    {
-        image: REDBULL,
-    },
-    {
-        image: COMPSA,
-    },
-    {
-        image: DDQIC,
-    },
-    {
-        image: QUEENS,
-    },
-    {
-        image: GITHUB,
-    },
-    {
-        image: REDBULL,
-    },
-    {
-        image: COMPSA,
-    },
-    {
-        image: DDQIC,
-    },
-    {
-        image: QUEENS,
-    },
-    {
-        image: GITHUB,
-    },
-    {
-        image: REDBULL,
-    },
-    {
-        image: COMPSA,
-    },
-    {
-        image: DDQIC,
-    },
-    {
-        image: QUEENS,
-    },
-    {
-        image: GITHUB,
-    },
-    {
-        image: REDBULL,
-    },
-    {
-        image: COMPSA,
-    },
-    {
-        image: DDQIC,
-    },
-    {
-        image: QUEENS,
-    },
-    {
-        image: GITHUB,
-    },
-    {
-        image: REDBULL,
-    },
-]
+  {
+    link: "/",
+    image: COMPSA,
+  },
+  {
+    link: "/",
+    image: DDQIC,
+  },
+  {
+    link: "/",
+    image: QUEENS,
+  },
+  {
+    link: "/",
+    image: GITHUB,
+  },
+  {
+    link: "/",
+    image: REDBULL,
+  },
+  {
+    link: "/",
+    image: COMPSA,
+  },
+  {
+    link: "/",
+    image: DDQIC,
+  },
+  {
+    link: "/",
+    image: QUEENS,
+  },
+  {
+    link: "/",
+    image: GITHUB,
+  },
+  {
+    link: "/",
+    image: REDBULL,
+  },
+  {
+    link: "/",
+    image: COMPSA,
+  },
+  {
+    link: "/",
+    image: DDQIC,
+  },
+  {
+    link: "/",
+    image: QUEENS,
+  },
+  {
+    link: "/",
+    image: GITHUB,
+  },
+  {
+    link: "/",
+    image: REDBULL,
+  },
+  {
+    link: "/",
+    image: COMPSA,
+  },
+  {
+    link: "/",
+    image: DDQIC,
+  },
+  {
+    link: "/",
+    image: QUEENS,
+  },
+  {
+    link: "/",
+    image: GITHUB,
+  },
+  {
+    link: "/",
+    image: REDBULL,
+  },
+  {
+    link: "/",
+    image: COMPSA,
+  },
+  {
+    link: "/",
+    image: DDQIC,
+  },
+  {
+    link: "/",
+    image: QUEENS,
+  },
+  {
+    link: "/",
+    image: GITHUB,
+  },
+  {
+    link: "/",
+    image: REDBULL,
+  },
+];
