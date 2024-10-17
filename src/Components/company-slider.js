@@ -25,7 +25,7 @@ function CompanySlider({ cards, slideLeft, link }) {
           }`}
         >
           {cards.map((card, i) => (
-            <a href={card.link}>
+            <a href={card.link} target="_blank">
               <div key={i} className={` w-[100%] flex flex-col justify-center`}>
                 <div className="flex items-center  w-full">
                   <Image

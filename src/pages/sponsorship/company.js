@@ -2,103 +2,103 @@ import { QUEENS, REDBULL, GITHUB, DDQIC, COMPSA } from "@/../public/sponsors";
 
 export const company = [
   {
-    link: "/",
+    link: "https://compsa.ca",
     image: COMPSA,
   },
   {
-    link: "/",
+    link: "https://www.queensu.ca/innovationcentre",
     image: DDQIC,
   },
   {
-    link: "/",
+    link: "https://www.queensu.ca",
     image: QUEENS,
   },
   {
-    link: "/",
+    link: "https://github.com",
     image: GITHUB,
   },
   {
-    link: "/",
+    link: "https://www.redbull.com",
     image: REDBULL,
   },
   {
-    link: "/",
+    link: "https://compsa.ca",
     image: COMPSA,
   },
   {
-    link: "/",
+    link: "https://www.queensu.ca/innovationcentre",
     image: DDQIC,
   },
   {
-    link: "/",
+    link: "https://www.queensu.ca",
     image: QUEENS,
   },
   {
-    link: "/",
+    link: "https://github.com",
     image: GITHUB,
   },
   {
-    link: "/",
+    link: "https://www.redbull.com",
     image: REDBULL,
   },
   {
-    link: "/",
+    link: "https://compsa.ca",
     image: COMPSA,
   },
   {
-    link: "/",
+    link: "https://www.queensu.ca/innovationcentre",
     image: DDQIC,
   },
   {
-    link: "/",
+    link: "https://www.queensu.ca",
     image: QUEENS,
   },
   {
-    link: "/",
+    link: "https://github.com",
     image: GITHUB,
   },
   {
-    link: "/",
+    link: "https://www.redbull.com",
     image: REDBULL,
   },
   {
-    link: "/",
+    link: "https://compsa.ca",
     image: COMPSA,
   },
   {
-    link: "/",
+    link: "https://www.queensu.ca/innovationcentre",
     image: DDQIC,
   },
   {
-    link: "/",
+    link: "https://www.queensu.ca",
     image: QUEENS,
   },
   {
-    link: "/",
+    link: "https://github.com",
     image: GITHUB,
   },
   {
-    link: "/",
+    link: "https://www.redbull.com",
     image: REDBULL,
   },
   {
-    link: "/",
+    link: "https://compsa.ca",
     image: COMPSA,
   },
   {
-    link: "/",
+    link: "https://www.queensu.ca/innovationcentre",
     image: DDQIC,
   },
   {
-    link: "/",
+    link: "https://www.queensu.ca",
     image: QUEENS,
   },
   {
-    link: "/",
+    link: "https://github.com",
     image: GITHUB,
   },
   {
-    link: "/",
+    link: "https://www.redbull.com",
     image: REDBULL,
   },
 ];
