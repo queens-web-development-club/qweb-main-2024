@@ -1,83 +1,104 @@
-import COMPSA from "../../../public/sponsors/COMPSA.png";
-import DDQIC from "../../../public/sponsors/DDQIC.png";
-import GITHUB from "../../../public/sponsors/Github.png";
-import REDBULL from "../../../public/sponsors/Redbull.png";
-import QUEENS from "../../../public/sponsors/Queens.png";
+import { QUEENS, REDBULL, GITHUB, DDQIC, COMPSA } from "@/../public/sponsors";
 
 export const company = [
-    {
-        image: COMPSA,
-    },
-    {
-        image: DDQIC,
-    },
-    {
-        image: QUEENS,
-    },
-    {
-        image: GITHUB,
-    },
-    {
-        image: REDBULL,
-    },
-    {
-        image: COMPSA,
-    },
-    {
-        image: DDQIC,
-    },
-    {
-        image: QUEENS,
-    },
-    {
-        image: GITHUB,
-    },
-    {
-        image: REDBULL,
-    },
-    {
-        image: COMPSA,
-    },
-    {
-        image: DDQIC,
-    },
-    {
-        image: QUEENS,
-    },
-    {
-        image: GITHUB,
-    },
-    {
-        image: REDBULL,
-    },
-    {
-        image: COMPSA,
-    },
-    {
-        image: DDQIC,
-    },
-    {
-        image: QUEENS,
-    },
-    {
-        image: GITHUB,
-    },
-    {
-        image: REDBULL,
-    },
-    {
-        image: COMPSA,
-    },
-    {
-        image: DDQIC,
-    },
-    {
-        image: QUEENS,
-    },
-    {
-        image: GITHUB,
-    },
-    {
-        image: REDBULL,
-    },
-]
+  {
+    link: "https://compsa.ca",
+    image: COMPSA,
+  },
+  {
+    link: "https://www.queensu.ca/innovationcentre",
+    image: DDQIC,
+  },
+  {
+    link: "https://www.queensu.ca",
+    image: QUEENS,
+  },
+  {
+    link: "https://github.com",
+    image: GITHUB,
+  },
+  {
+    link: "https://www.redbull.com",
+    image: REDBULL,
+  },
+  {
+    link: "https://compsa.ca",
+    image: COMPSA,
+  },
+  {
+    link: "https://www.queensu.ca/innovationcentre",
+    image: DDQIC,
+  },
+  {
+    link: "https://www.queensu.ca",
+    image: QUEENS,
+  },
+  {
+    link: "https://github.com",
+    image: GITHUB,
+  },
+  {
+    link: "https://www.redbull.com",
+    image: REDBULL,
+  },
+  {
+    link: "https://compsa.ca",
+    image: COMPSA,
+  },
+  {
+    link: "https://www.queensu.ca/innovationcentre",
+    image: DDQIC,
+  },
+  {
+    link: "https://www.queensu.ca",
+    image: QUEENS,
+  },
+  {
+    link: "https://github.com",
+    image: GITHUB,
+  },
+  {
+    link: "https://www.redbull.com",
+    image: REDBULL,
+  },
+  {
+    link: "https://compsa.ca",
+    image: COMPSA,
+  },
+  {
+    link: "https://www.queensu.ca/innovationcentre",
+    image: DDQIC,
+  },
+  {
+    link: "https://www.queensu.ca",
+    image: QUEENS,
+  },
+  {
+    link: "https://github.com",
+    image: GITHUB,
+  },
+  {
+    link: "https://www.redbull.com",
+    image: REDBULL,
+  },
+  {
+    link: "https://compsa.ca",
+    image: COMPSA,
+  },
+  {
+    link: "https://www.queensu.ca/innovationcentre",
+    image: DDQIC,
+  },
+  {
+    link: "https://www.queensu.ca",
+    image: QUEENS,
+  },
+  {
+    link: "https://github.com",
+    image: GITHUB,
+  },
+  {
+    link: "https://www.redbull.com",
+    image: REDBULL,
+  },
+];

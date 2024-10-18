@@ -35,6 +35,12 @@ main {
   .front-card{
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    .photo{
+      width: 350px;
+      height: 400px;
+      object-fit:cover;
+      border-radius: 2.5%;
+    }
   }
 
   .back-card{
