@@ -75,6 +75,23 @@ const PAST_PROJECTS = [
       "Portfolio designed for local musician with a guestbook and music integration.",
     link: null,
   },
+
+  {
+    id: 9,
+    imageUrl: "/projects/qvsa.png",
+    name: "QVSA",
+    description:
+      "Queen's Vietnamese Students' Association is an all inclusive student organization. Our goal is to unite former students and faculty members around Vietnamese tradition and culture.",
+    link: null,
+  },
+  {
+    id: 10,
+    imageUrl: "/projects/gods-blood.png",
+    name: "God's Blood",
+    description:
+      "Embark on an odyssey of taste with God's Blood, a series of divinely inspired energy drinks. Each flavor is a tribute to the pantheon of Olympus, crafted for mortals who seek the extraordinary.",
+    link: "null",
+  },
 ];
 
 export default PAST_PROJECTS;
