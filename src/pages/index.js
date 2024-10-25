@@ -32,7 +32,7 @@ export default function Home() {
       <Process />
       <TechStack />
       <Projects />
-      {/* <Contact /> */}
+      <Contact />
       {/* <Icons /> */}
       <Footer />
     </>
