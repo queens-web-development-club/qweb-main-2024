@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CompanySlider from "@/Components/company-slider";
-import { company } from "@/pages/sponsorship/company";
+import { company } from "@/Components/company";
 
 
 export default function Sponsorship() {

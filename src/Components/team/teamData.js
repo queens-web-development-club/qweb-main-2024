@@ -95,7 +95,7 @@ const teamData = {
       exec: false,
       role: "Development Director",
       text: {
-        year: "2th Year",
+        year: "2nd Year",
         program: "Computing",
         responsibility:
           "Deploying our new websites, assisting teams in the development sprint, making necessary frontend changes to the qweb site",
