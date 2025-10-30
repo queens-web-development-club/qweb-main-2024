@@ -90,7 +90,31 @@ const PAST_PROJECTS = [
     name: "God's Blood",
     description:
       "Embark on an odyssey of taste with God's Blood, a series of divinely inspired energy drinks. Each flavor is a tribute to the pantheon of Olympus, crafted for mortals who seek the extraordinary.",
-    link: "null",
+    link: null,
+  },
+  {
+    id: 11,
+    imageUrl: "/projects/booking-app.png",
+    name: "QWeb Calender Booking App",
+    description:
+      "Unified booking platform supporting both team meetings and interview scheduling.",
+    link: "https://calendar.qweb.dev/",
+  },
+  {
+    id: 12,
+    imageUrl: "/projects/table-tennis.png",
+    name: "Queen's Table Tennis Club",
+    description:
+      "The Queen's University Table Tennis Club is a vibrant community welcoming players of all skill levels, from beginners to seasoned enthusiasts.",
+    link: null,
+  },
+  {
+    id: 13,
+    imageUrl: "/projects/great-start-families.png",
+    name: "A Great Start for Families",
+    description:
+      "A Great Start for Families connects parents and caregivers with local resources, programs, and supports to help children and families thrive.",
+    link: null,
   },
 ];
 
