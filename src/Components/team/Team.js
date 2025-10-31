@@ -15,7 +15,7 @@ export default function Team({ title }) {
 
   return (
     <section className="flex flex-col mt-[3rem]">
-      <h2 className="gradient-text text-center font-bold text-6xl pb-[1rem]">{`< ${title} />`}</h2>
+      <h2 className="gradient-text text-center font-bold text-4xl xl:text-6xl pb-[1rem]">{`< ${title} />`}</h2>
       <div className="flex flex-wrap gap-[4rem] justify-center items-center mt-[2rem] w-[80%] mx-auto">
         {teamData[title].map((item, key) => {
           return (
