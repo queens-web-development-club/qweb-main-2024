@@ -28,6 +28,11 @@ export default function Navbar() {
             sponsorship
           </a>
         </h1>
+        <h1>
+          <a href="/education" onClick={() => setIsCollapsed(!isCollapsed)}>
+          education
+          </a>
+        </h1>
       </div>
       <img
         src={isCollapsed ? "/brand/hamburger.png" : "/brand/arrow-up.png"}
