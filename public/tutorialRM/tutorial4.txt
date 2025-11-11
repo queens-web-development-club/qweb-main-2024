@@ -1,0 +1,91 @@
+⸻
+
+QWeb Tutorial 4 — Introduction to Git & GitHub
+
+This tutorial introduces Git, a version control system used to track code changes, collaborate with others, and safely manage project history. We also cover how to connect to GitHub and push your code online.
+￼
+
+⸻
+
+1. What is Git?
+
+Git is a version control system. It allows you to:
+• Track changes in your code over time
+• Revert back to previous versions
+• Collaborate with others seamlessly
+• Work with remote repositories like GitHub
+
+Think of it as a time machine for your code.
+
+⸻
+
+2. Why Use Git?
+
+Benefit Description
+Prevents losing work No more “final_final_realfinal2” folders
+Safe experimentation Create branches or roll back mistakes easily
+Collaboration Multiple people can contribute to the same project
+
+⸻
+
+3. Git Basics (Local Commands)
+
+Action Command Explanation
+Initialize Git git init Start tracking a project
+Stage files git add <file> Prepare files for commit
+Commit changes git commit -m "message" Save a snapshot of progress
+Ignore files .gitignore Exclude files like .env, node_modules, etc.
+
+Example workflow:
+
+git init
+git add index.html
+git commit -m "Initial commit"
+
+⸻
+
+4. GitHub Basics
+   1. Go to github.com
+   2. Create a new repository
+   3. Name it something like: qweb-week4-tutorial
+   4. Add a README
+   5. Copy your repository link
+
+⸻
+
+5. Connect Local Project to GitHub
+
+git remote add origin <repo-link>
+git branch -M main
+git push -u origin main
+
+Now your project is online ✅
+
+⸻
+
+6. Syncing Your Changes
+
+Make Updates
+
+Edit files normally (HTML / CSS / JS / README)
+
+Stage + Commit
+
+git add .
+git commit -m "Updated files"
+
+Push to GitHub
+
+git push origin main
+
+Pull Changes from GitHub
+
+git pull origin main
+
+⸻
+
+Common Pattern
+
+edit → add → commit → push
+
+⸻

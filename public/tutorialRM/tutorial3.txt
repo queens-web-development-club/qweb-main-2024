@@ -1,0 +1,131 @@
+⸻
+
+QWeb Tutorial 3 — Introduction to JavaScript + DOM + Event Handling
+
+This tutorial introduces JavaScript fundamentals and how it brings interactivity to web pages. We cover variables, functions, loops, and how to modify HTML using the DOM. We also practice adding event listeners to make buttons and elements respond to user actions.
+￼
+
+⸻
+
+1. What is JavaScript?
+
+JavaScript is the programming language of the web. It allows you to:
+• Make websites dynamic and interactive
+• Create animations and handle user input
+• Build full web apps and even mobile apps (with frameworks like React Native)
+
+Think of it like this:
+
+Role Handles
+HTML Structure (what’s on the page)
+CSS Style (how it looks)
+JavaScript Behavior (how it reacts & changes)
+
+⸻
+
+2. How to Use JavaScript in a Webpage
+
+Inline Script
+
+Add directly inside your HTML:
+
+<script>
+  alert("Hello QWeb!");
+</script>
+
+External Script File
+
+Keep JavaScript in its own file:
+
+<script src="script.js"></script>
+
+Example
+
+script.js:
+
+console.log("JavaScript is working!");
+
+⸻
+
+3. JavaScript Basics
+
+Console Log
+
+Used to print information:
+
+console.log("Hello QWeb!");
+console.log(42);
+console.log("2 + 2 =", 2 + 2);
+
+Variables
+
+Keyword Meaning Example
+const Value cannot change const pi = 3.14;
+let Value can change let username = "Mark";
+var Older style (avoid) var oldValue = "Not recommended";
+
+Loops
+
+for (let i = 0; i < 5; i++) {
+console.log("Iteration:", i);
+}
+
+Functions
+
+function greet() {
+console.log("Hello QWeb!");
+}
+greet();
+
+Arrow Functions
+
+const greet = (name) => {
+console.log("Hello " + name + "!");
+};
+greet("Mark");
+
+⸻
+
+4. DOM (Document Object Model)
+
+The DOM is how JavaScript sees the webpage.
+It allows JavaScript to:
+• Select HTML elements
+• Change text & styles
+• Respond to user interactions
+
+Example HTML
+
+<h1 id="title">Welcome to QWeb</h1>
+<button id="changeBtn">Change Text</button>
+
+Selecting and Changing Elements
+
+const titleElement = document.getElementById("title");
+titleElement.textContent = "Hello from JavaScript!";
+
+Event Listeners
+
+const button = document.getElementById("changeBtn");
+
+button.addEventListener("click", function() {
+document.getElementById("title").textContent = "Button was clicked!";
+});
+
+⸻
+
+5. Activity — Interactive Button
+
+A) Change Text
+
+document.getElementById("changeBtn").addEventListener("click", function() {
+document.getElementById("title").textContent = "Button was clicked!";
+});
+
+B) Change Background Color
+
+document.getElementById("changeBtn").addEventListener("click", function() {
+document.getElementById("parentContainer").style.backgroundColor = "blue";
+});
+
+⸻

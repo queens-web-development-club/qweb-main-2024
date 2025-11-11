@@ -1,0 +1,146 @@
+⸻
+
+QWeb Tutorial 2 — CSS Fundamentals + Flexbox + Styling Components
+
+This tutorial introduces core CSS concepts and shows how to use them to style elements on a webpage. We’ll walk through colors, spacing, display types, the box model, Flexbox layouts, and styling a reusable “QWeb Card” component. We’ll also briefly compare Vanilla CSS vs Tailwind CSS.
+
+⸻
+
+1. CSS Basics
+
+Colors
+
+You can change a text or background color using:
+
+color: <value>;
+background-color: <value>;
+
+Values can be names (red), hex (#ff0000), rgb (rgb(255,0,0)), etc.
+
+Spacing
+
+CSS spacing uses margin and padding:
+
+Property Description
+margin Space outside the element
+padding Space inside the element, between border and content
+
+Example:
+
+.box {
+margin: 20px;
+padding: 10px;
+}
+
+Display Types
+
+Controls how elements behave in layout:
+• block → Starts on a new line
+• inline → Stays in text flow
+• inline-block → Inline but keeps width/height
+
+Box Model Overview
+
+Every element is made of:
+
+content → padding → border → margin
+
+Use your browser Inspect Element to visualize spacing.
+
+⸻
+
+2. Flexbox
+
+Flexbox is used to align and distribute items inside a container.
+
+Parent (Container) Properties
+
+.container {
+display: flex; /_ enables flexbox _/
+flex-direction: row; /_ row or column _/
+justify-content: center; /_ horizontal alignment _/
+align-items: center; /_ vertical alignment _/
+}
+
+Child Element Properties
+
+.item {
+flex: 1; /_ makes items expand/grow _/
+align-self: end; /_ override alignment for a single item _/
+}
+
+Common Flexbox Demo
+• Place 3 divs side-by-side
+• Center them horizontally & vertically
+• Switch layout from row to column
+
+⸻
+
+3. Styling a QWeb Card
+
+Text Styling
+
+.card {
+font-size: 20px;
+font-weight: 500;
+text-align: center;
+}
+
+Borders
+
+.card {
+border: 2px solid #ccc;
+border-radius: 12px;
+}
+
+Sizing
+• px → fixed size
+• % → relative to parent
+• vh / vw → relative to viewport size
+
+.card {
+width: 300px;
+height: 200px;
+}
+
+Shadows
+
+.card {
+box-shadow: 0px 4px 12px rgba(0,0,0,0.2);
+}
+
+Hover States
+
+.card:hover {
+transform: scale(1.02);
+box-shadow: 0px 6px 20px rgba(0,0,0,0.25);
+}
+
+⸻
+
+4. Media Queries (Responsive Design)
+
+Use media queries to adapt layout for smaller screens:
+
+@media (max-width: 600px) {
+.card {
+width: 90%;
+}
+}
+
+⸻
+
+5. Vanilla CSS vs Tailwind CSS
+
+Feature Vanilla CSS Tailwind CSS
+Styling location Separate .css file Inline in HTML
+Approach Semantic classes Utility-first classes
+Example
+
+<div class="hero-title"></div>
+
+<div class="text-2xl font-semibold text-gray-700"></div>
+
+Vanilla CSS focuses on named classes, Tailwind focuses on compact utility classes.
+
+⸻

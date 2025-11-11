@@ -1,0 +1,150 @@
+⸻
+
+QWeb Tutorial 5 — Introduction to React + Vite + Components
+
+This tutorial introduces React, a JavaScript library used to build interactive UIs, and Vite, a modern development environment for fast React app setup. You’ll learn how to create a React project, understand the file structure, and build your first components.
+￼
+
+⸻
+
+1. What is React?
+
+React is a JavaScript library for building user interfaces.
+
+Key Ideas:
+• Uses components — reusable pieces of UI
+• Updates the screen efficiently with the virtual DOM
+• Commonly used for web apps, dashboards, and single-page applications
+
+Think of the tech stack like this:
+
+Part Responsibility
+HTML Structure
+CSS Styling
+React (JS) Logic + Interactivity
+
+⸻
+
+2. What is Vite?
+
+Vite is a development tool and dev server designed to make React development:
+• Fast (instant startup & hot reload)
+• Modern
+• Lightweight
+
+It replaces older tools like Create React App and provides faster feedback during development.
+
+⸻
+
+3. Why Use React + Vite?
+
+Benefit Explanation
+Fast startup No long waiting to rebuild
+Lightweight setup Minimal configuration needed
+Modern tooling Uses ES modules and newer JavaScript
+Scalable Works for small and very large projects
+
+⸻
+
+4. Setup Instructions
+
+1. Check Node.js & npm
+
+node -v
+npm -v
+
+2. Create a Vite Project
+
+npm create vite@latest
+
+When prompted → choose:
+
+React
+JavaScript
+
+3. Install & Run
+
+cd <project-name>
+npm install
+npm run dev
+
+Open your project in the browser:
+
+http://localhost:5173
+
+⸻
+
+5. Project Structure Overview
+
+project-name/
+├─ src/
+│ ├─ components/ # Your reusable UI building blocks
+│ ├─ App.jsx # Root UI component
+│ └─ main.jsx # Connects React to the browser
+├─ index.html # Entry point for browser
+└─ package.json # Project dependencies & scripts
+
+⸻
+
+6. React Components
+
+A component is a function that returns UI (written with JSX).
+
+function Header(){
+return <h1>Hello QWeb!</h1>;
+}
+export default Header;
+
+Use it in App.jsx:
+
+import Header from "./components/Header";
+
+function App(){
+return (
+<>
+<Header />
+</>
+);
+}
+
+export default App;
+
+⸻
+
+7. JSX Basics
+
+Passing Data with Props
+
+function Card(props){
+return <h2>{props.title}</h2>;
+}
+<Card title="Welcome to QWeb!" />
+
+Handling Events
+
+<button onClick={() => alert("Button clicked!")}>
+Click me
+</button>
+
+⸻
+
+8. Activity
+
+Create a Greeting.jsx component: 1. It displays “Hello, QWeb!” 2. Add a button 3. When clicked → change the text
+
+Example approach:
+
+function Greeting(){
+const [text, setText] = useState("Hello, QWeb!");
+
+return (
+<>
+<h2>{text}</h2>
+<button onClick={() => setText("Welcome to React!")}>
+Change Text
+</button>
+</>
+);
+}
+
+⸻
