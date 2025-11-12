@@ -88,27 +88,25 @@ export default function Education() {
           ))}
         </div>
       </div>
-      {openTutorial && (
-        <div
-          className={`tutorial-text-container ${(next =
-            openTutorial !== null ? "is-open" : "")}`}
-        >
-          <div className="tutorial-container-header">
-            <button
-              className="tutorial-close-btn"
-              onClick={() => setOpenTutorial(null)}
-              aria-label="Close tutorial"
-            >
-              <Image
-                src={CloseButton}
-                alt="close"
-                className="tutorial-close-btn-img"
-              />
-            </button>
-          </div>
-          <TextPopup path={`/tutorialRM/${openTutorial}`} />
+      <div
+        className={`tutorial-text-container ${openTutorial ? "is-open" : ""}`}
+        aria-hidden={!openTutorial}
+      >
+        <div className="tutorial-container-header">
+          <button
+            className="tutorial-close-btn"
+            onClick={() => setOpenTutorial(null)}
+            aria-label="Close tutorial"
+          >
+            <Image
+              src={CloseButton}
+              alt="close"
+              className="tutorial-close-btn-img"
+            />
+          </button>
         </div>
-      )}
+        {openTutorial && <TextPopup path={`/tutorialRM/${openTutorial}`} />}
+      </div>
     </div>
   );
 }

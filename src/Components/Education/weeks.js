@@ -72,7 +72,7 @@ const weeks = [
     id: "week-04",
     title: "Tutorial 4 - Git + GitHub",
     intro:
-      "Adds interactivity and dynamic behavior to web pages, allowing real-time updates, animations, and logic.",
+      "Enables version control and collaboration, allowing developers to track changes, manage branches, and share projects seamlessly.",
     href: "https://github.com/queens-web-development-club/Education25-26",
     links: [
       {
@@ -85,7 +85,7 @@ const weeks = [
         url: "https://github.com/queens-web-development-club/Education25-26/tree/main/week4",
       },
     ],
-    logo: "/tech/js.svg",
+    logo: "/tech/git.svg",
     file: "tutorial4.txt",
   },
 
@@ -93,7 +93,7 @@ const weeks = [
     id: "week-05",
     title: "Tutorial 5 - React + Vite",
     intro:
-      "Adds interactivity and dynamic behavior to web pages, allowing real-time updates, animations, and logic.",
+      "Builds fast, component-based web interfaces using a modern development environment optimized for speed and efficiency.",
     href: "https://github.com/queens-web-development-club/Education25-26",
     links: [
       {
@@ -113,7 +113,7 @@ const weeks = [
         url: "https://github.com/queens-web-development-club/Education25-26/tree/main/week5",
       },
     ],
-    logo: "/tech/js.svg",
+    logo: "/tech/react-js.svg",
     file: "tutorial5.txt",
   },
 ];
