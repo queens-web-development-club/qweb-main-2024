@@ -1,0 +1,155 @@
+⸻
+
+QWeb Tutorial 6 — Routing, Layouts & Styling in React
+
+This tutorial introduces React Router for creating multiple pages within a single-page React app, how to structure shared components like headers and layouts, and how to style with Tailwind CSS.
+￼
+
+⸻
+
+1. What is Routing?
+
+Routing allows users to navigate between pages without reloading the site.
+
+Benefits:
+• Smooth navigation (Single-Page App behavior)
+• Faster performance (no full page refresh)
+• Each route maps to a URL path (e.g., /, /about, /projects)
+
+React routing is handled by React Router.
+
+⸻
+
+2. Adding React Router to Your Project
+
+Install React Router:
+
+npm install react-router-dom
+
+Wrap Your App with a Router (in main.jsx):
+
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+
+root.render(
+<BrowserRouter>
+<App />
+</BrowserRouter>
+);
+
+This enables client-side navigation.
+
+⸻
+
+3. Defining Routes
+
+Example: App.jsx
+
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+
+function App() {
+return (
+<Routes>
+<Route path="/" element={<Home />} />
+<Route path="/about" element={<About />} />
+</Routes>
+);
+}
+
+export default App;
+
+    •	<Routes> holds all routes
+    •	<Route> maps a path → component
+
+⸻
+
+4. Shared Components
+
+Shared UI across pages is handled using Layout components.
+
+Examples include:
+
+Component Purpose
+Header Navigation (links to pages)
+Footer Site footer content
+Layout Wraps page with Header + Footer (uses <Outlet />)
+
+Layout Example (src/components/Layout.jsx)
+
+import { Outlet, Link } from "react-router-dom";
+
+export default function Layout(){
+return (
+<div className="min-h-screen flex flex-col">
+<header className="bg-gray-900 text-white p-4 flex gap-6">
+<Link to="/">Home</Link>
+<Link to="/about">About</Link>
+</header>
+
+      <main className="flex-1 p-6">
+        <Outlet />
+      </main>
+
+      <footer className="p-4 text-center text-gray-500 text-sm">
+        2025 QWeb Development
+      </footer>
+    </div>
+
+);
+}
+
+Nesting Routes in Layout (App.jsx alternative)
+
+import Layout from "./components/Layout";
+
+<Routes>
+  <Route element={<Layout />}>
+    <Route path="/" element={<Home />} />
+    <Route path="/about" element={<About />} />
+  </Route>
+</Routes>
+
+⸻
+
+5. Adding Tailwind CSS (for Styling)
+
+Install & Initialize Tailwind:
+
+npm install -D tailwindcss
+npx tailwindcss init -p
+
+Configure tailwind.config.js:
+
+content: ["./index.html", "./src/**/*.{js,jsx}"],
+
+Add Tailwind to src/index.css:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+Then run:
+
+npm run dev
+
+Tailwind gives you utility classes for fast styling, especially helpful with components.
+
+⸻
+
+6. Live Build Example Pages
+
+Home Component
+
+export default function Home(){
+return <h1 className="text-3xl font-bold">Home</h1>;
+}
+
+About Component
+
+export default function About(){
+return <h1 className="text-3xl font-bold">About</h1>;
+}
+
+⸻

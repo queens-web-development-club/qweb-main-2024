@@ -1,0 +1,201 @@
+
+
+⸻
+
+QWeb Tutorial 7 — Working With APIs in React
+
+This tutorial introduces APIs, how to fetch data using fetch(), how to use useEffect() for API calls, and how to work with JSON responses. You’ll also build a small activity using real API calls.
+
+⸻
+
+1. What Are APIs?
+
+API = Application Programming Interface
+
+APIs allow two programs to communicate:
+	•	Your app sends a request
+	•	The API returns a response (often JSON)
+
+Examples
+	•	Weather API → current temperature
+	•	Movie API → trending movies
+	•	Pokémon API → character stats
+
+Basic API Flow
+Your App → API Request → API → API Response (JSON) → Back to Your App
+
+Example Request
+GET https://api.example.com/data
+
+Example JSON Request
+{
+  "name": "Felix",
+  "age": 21
+}
+
+
+⸻
+
+2. How APIs Work
+
+Most APIs return JSON because it is lightweight and easy to use.
+
+Typical Flow in React
+	1.	Component loads
+	2.	App sends API request
+	3.	API responds with JSON
+	4.	UI updates with the data
+
+⸻
+
+3. What is fetch()?
+
+fetch() is a built-in JavaScript function for making HTTP requests.
+
+Using .then()
+fetch("https://api.example.com/data")
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+Using async/await
+async function getData() {
+  const res = await fetch("https://api.example.com/data");
+  const data = await res.json();
+  console.log(data);
+}
+
+⸻
+
+4. Fetching Data with useEffect()
+
+useEffect() runs after your component renders.
+
+Example
+import { useEffect } from "react";
+
+useEffect(() => {
+  console.log("Component loaded");
+}, []);
+
+Fetching Inside useEffect()
+import { useEffect, useState } from "react";
+
+function App() {
+  const [info, setInfo] = useState(null);
+
+  useEffect(() => {
+    fetch("https://api.example.com/data")
+      .then(res => res.json())
+      .then(data => setInfo(data));
+  }, []);
+
+  return (
+    <div>
+      <h1>API Data:</h1>
+      {info && <pre>{JSON.stringify(info, null, 2)}</pre>}
+    </div>
+  );
+}
+
+export default App;
+
+⸻
+
+5. JSON Basics
+
+JSON = JavaScript Object Notation
+
+APIs almost always return data in JSON.
+
+Example JSON
+{
+  "title": "React Workshop",
+  "instructor": "Zac",
+  "students": 25
+}
+JSON looks like a JavaScript object, which makes it easy to use inside React components.
+
+⸻
+
+6. API Keys
+
+Some APIs require an API key (a password that identifies your app).
+
+Example
+fetch(`https://api.example.com/data?api_key=${YOUR_KEY}`)
+
+Important
+
+❗ Never expose API keys publicly.
+Store them in .env files and don’t commit them to GitHub.
+
+⸻
+
+7. Tutorial Activity
+
+1. Create a JSON file with all QWeb teams and member counts:
+{
+  "Co-Chairs": { "Co-chairs": 2 },
+  "Development": { "Directors": 3, "Exec": 1 },
+  "Education": { "Directors": 2, "Exec": 1 },
+  "Partnerships": { "Directors": 2, "Exec": 1 },
+  "Design": { "Directors": 2, "Exec": 1 }
+}
+
+⸻
+
+2. Create a component that renders a card for each team
+
+You will:
+	•	Import your JSON file
+	•	Map through the keys
+	•	Display each team using a reusable card component
+
+⸻
+
+3. Random User API Component
+
+File: src/components/RandomUser.jsx
+import { useEffect, useState } from "react";
+
+export default function RandomUser() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    async function loadUser() {
+      const res = await fetch("https://randomuser.me/api/");
+      const data = await res.json();
+      setUser(data.results[0]);
+    }
+    loadUser();
+  }, []);
+
+  return (
+    <div>
+      <h2>Random User:</h2>
+      {user && (
+        <>
+          <p>{user.name.first} {user.name.last}</p>
+          <img src={user.picture.medium} />
+        </>
+      )}
+    </div>
+  );
+}
+
+⸻
+
+Use the Component
+import RandomUser from "./components/RandomUser";
+
+function App() {
+  return (
+    <>
+      <RandomUser />
+    </>
+  );
+}
+
+export default App;
+
+⸻

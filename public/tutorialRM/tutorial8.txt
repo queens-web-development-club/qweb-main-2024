@@ -1,0 +1,303 @@
+
+⸻
+
+QWeb Tutorial 8 — Introduction to Backend & Express.js
+
+This tutorial introduces backend development, how server-side logic works, how to build an Express.js backend, and how to fetch data from it using React.
+
+⸻
+
+1. What Is a Backend?
+
+The backend is the part of your app that runs on a server, not in the browser.
+
+A backend handles:
+	•	Data storage (files, JSON, databases)
+	•	Authentication (signup / login)
+	•	Business logic (rules, calculations)
+	•	API responses (data the frontend fetches)
+
+Common backend frameworks
+	•	Express.js (Node.js)
+	•	Flask (Python)
+	•	Django (Python)
+
+Backend = logic, data, and rules your users do not see, but rely on.
+
+⸻
+
+2. Why Do You Need a Backend?
+
+You gain full control over:
+	•	Your data
+	•	Your API structure
+	•	Your security rules
+	•	Who can access what
+
+A backend lets you build:
+	•	Dashboards
+	•	Social apps
+	•	Games
+	•	E-commerce systems
+	•	Anything requiring stored or persistent data
+
+Without a backend, your site is static — with one, it’s a real application.
+
+⸻
+
+3. What Is Express.js?
+
+Express.js is a lightweight backend framework built on Node.js.
+
+You can use Express to:
+	•	Build server logic
+	•	Define your own API endpoints
+	•	Send JSON data to your frontend
+
+Example Route
+app.get("/api/data", (req, res) => {
+  res.json({ message: "Hello from backend!" });
+});
+Your React app can fetch this endpoint using fetch().
+
+⸻
+
+4. Backend Project Structure
+
+A simple full-stack folder layout:
+project/
+├── backend/
+│   ├── server.json
+│   ├── data.json
+│   └── package.json
+│
+└── frontend/
+    ├── index.html
+    ├── package.json
+    └── src/
+        ├── App.jsx
+        ├── main.jsx
+        └── components/
+What each part does:
+	•	backend/server.js — Defines API routes
+	•	backend/data.json — Stores your data
+	•	frontend/ — React + Vite app
+	•	App.jsx — Makes fetch requests to the backend
+
+⸻
+
+5. Fetching Data from Express in React
+
+If your backend runs at:
+http://localhost:3000
+
+And you have an endpoint:
+/api/data
+
+Then React fetches it like this:
+fetch("http://localhost:3000/api/data")
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+You still use:
+	•	useEffect()
+	•	useState()
+	•	Regular rendering logic
+
+Data Flow (Full Stack)
+React → fetch()  
+      → Express backend  
+      → data.json  
+      → JSON response  
+      → React displays data
+This is the foundation of full-stack web development.
+
+⸻
+
+6. Example Project
+
+This example walks you through building a tiny backend using Express.js and connecting it to a React frontend.
+
+We’ll create:
+	•	A backend that stores users
+	•	A React component that loads them, adds new ones, and deletes them
+
+⸻
+
+Step 1 — Make a backend folder
+
+In your project:
+mkdir backend
+cd backend
+npm init -y
+npm install express cors
+This creates a new Node.js backend and installs:
+	•	express → server
+	•	cors → allows frontend to access backend
+
+⸻
+
+Step 2 — Create data.json
+
+Inside /backend, create a file named data.json:
+{
+  "users": [
+    { "id": 1, "name": "Felix" },
+    { "id": 2, "name": "Mark" },
+    { "id": 3, "name": "Zac" }
+  ]
+}
+This acts as your “mini database.”
+
+⸻
+
+Step 3 — Create server.js
+
+Inside /backend, create server.js:
+const express = require("express");
+const cors = require("cors");
+const fs = require("fs");
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+let data = JSON.parse(fs.readFileSync("./data.json", "utf-8"));
+
+// GET all users
+app.get("/api/users", (req, res) => {
+  res.json(data.users);
+});
+
+// POST add new user
+app.post("/api/users", (req, res) => {
+  const newUser = {
+    id: Date.now(),
+    name: req.body.name
+  };
+
+  data.users.push(newUser);
+  fs.writeFileSync("./data.json", JSON.stringify(data, null, 2));
+
+  res.json(newUser);
+});
+
+// DELETE a user
+app.delete("/api/users/:id", (req, res) => {
+  data.users = data.users.filter(u => u.id !== Number(req.params.id));
+  fs.writeFileSync("./data.json", JSON.stringify(data, null, 2));
+
+  res.json({ success: true });
+});
+
+app.listen(3000, () => console.log("Backend running on port 3000"));
+This file creates:
+	•	/api/users → GET
+	•	/api/users → POST
+	•	/api/users/:id → DELETE
+
+⸻
+
+Step 4 — Run the backend
+
+node server.js
+
+Your backend is now running on:
+
+http://localhost:3000
+
+⸻
+
+Step 5 — Create a Vite React frontend
+
+In your root folder:
+npm create vite@latest
+cd frontend
+npm install
+npm run dev
+
+⸻
+
+Step 6 — Make a simple React component (UserList.jsx)
+
+Inside /frontend/src, create:
+
+UserList.jsx
+import { useEffect, useState } from "react";
+
+export default function UserList() {
+  const [users, setUsers] = useState([]);
+  const [name, setName] = useState("");
+
+  // Load all users
+  const loadUsers = () => {
+    fetch("http://localhost:3000/api/users")
+      .then(res => res.json())
+      .then(data => setUsers(data));
+  };
+
+  useEffect(() => {
+    loadUsers();
+  }, []);
+
+  // Add user
+  const addUser = () => {
+    fetch("http://localhost:3000/api/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name })
+    }).then(() => {
+      setName("");
+      loadUsers();
+    });
+  };
+
+  // Delete user
+  const deleteUser = (id) => {
+    fetch(`http://localhost:3000/api/users/${id}`, {
+      method: "DELETE"
+    }).then(() => loadUsers());
+  };
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <h1>User Dashboard</h1>
+
+      {/* Input to add new user */}
+      <input
+        value={name}
+        placeholder="Name..."
+        onChange={(e) => setName(e.target.value)}
+      />
+      <button onClick={addUser}>Add User</button>
+
+      {/* Display users */}
+      <ul>
+        {users.map((u) => (
+          <li key={u.id}>
+            {u.name}
+            <button style={{ marginLeft: "10px" }} onClick={() => deleteUser(u.id)}>
+              Delete
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+⸻
+
+Step 7 — Hook it up in App.jsx
+
+import UserList from "./UserList";
+
+export default function App() {
+  return (
+    <>
+      <UserList />
+    </>
+  );
+}
+
+⸻

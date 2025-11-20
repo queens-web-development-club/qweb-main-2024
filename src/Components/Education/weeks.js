@@ -88,7 +88,6 @@ const weeks = [
     logo: "/tech/git.svg",
     file: "tutorial4.txt",
   },
-
   {
     id: "week-05",
     title: "Tutorial 5 - React + Vite",
@@ -115,6 +114,83 @@ const weeks = [
     ],
     logo: "/tech/react-js.svg",
     file: "tutorial5.txt",
+  },
+  {
+    id: "week-06",
+    title: "Tutorial 6 - Routing, Components & Styling in React",
+    intro:
+      "Learn how to navigate pages, structure reusable components, and style your React apps effectively using modern tools and best practices.",
+    href: "https://github.com/queens-web-development-club/Education25-26",
+    links: [
+      {
+        label: "W3Schools — React Routing",
+        url: "https://www.w3schools.com/react/react_router.asp",
+      },
+      {
+        label: "ReactJS - Components and Props",
+        url: "https://legacy.reactjs.org/docs/components-and-props.html",
+      },
+      {
+        label: "W3Schools — Styling React using CSS",
+        url: "https://www.w3schools.com/react/react_css.asp",
+      },
+      {
+        label: "See Example Code",
+        url: "https://github.com/queens-web-development-club/Education25-26/tree/main/week6",
+      },
+    ],
+    logo: "/tech/react-js.svg",
+    file: "tutorial6.txt",
+  },
+  {
+    id: "week-07",
+    title: "Tutorial 7 - APIs + Fetching Data",
+    intro:
+      "Learn how to communicate with external services, fetch live data, and integrate JSON responses directly into your React components.",
+    href: "https://github.com/queens-web-development-club/Education25-26",
+    links: [
+      {
+        label: "API Handling in JavaScript & React",
+        url: "https://dev.to/shubhamtiwari909/mastering-api-handling-in-javascript-react-a-complete-guide-45kk",
+      },
+      {
+        label: "Mozilla - Using the Fetch API",
+        url: "https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch",
+      },
+      {
+        label: "See Example Code",
+        url: "https://github.com/queens-web-development-club/Education25-26/tree/main/week5",
+      },
+    ],
+    logo: "/tech/react-js.svg",
+    file: "tutorial7.txt",
+  },
+  {
+    id: "week-08",
+    title: "Tutorial 8 - Backend Integration",
+    intro:
+      "Learn how to connect your React frontend to a backend server, build custom API routes, and manage data using a lightweight Express.js setup.",
+    href: "https://github.com/queens-web-development-club/Education25-26",
+    links: [
+      {
+        label: "ExpressJS",
+        url: "https://expressjs.com",
+      },
+      {
+        label: "GeeksForGeeks - JavaScript for Backend Development",
+        url: "https://www.geeksforgeeks.org/javascript/javascript-backend-basics/",
+      },
+      {
+        label: "W3Schools — NodeJS",
+        url: "https://www.w3schools.com/nodejs/",
+      },
+      {
+        label: "See Example Code",
+        url: "https://github.com/queens-web-development-club/Education25-26/tree/main/week8",
+      },
+    ],
+    logo: "/tech/express-js.svg",
+    file: "tutorial8.txt",
   },
 ];
 
