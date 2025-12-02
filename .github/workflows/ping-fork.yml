@@ -1,0 +1,19 @@
+name: Ping fork for sync
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send sync signal to fork
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.FORK_PAT }}" \
+            -H "Accept: application/vnd.github.everest-preview+json" \
+            https://api.github.com/repos/qweb-club/qweb-main-2024/dispatches \
+            -d '{"event_type": "sync-now"}'
