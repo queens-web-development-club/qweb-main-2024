@@ -1,0 +1,22 @@
+name: Sync main branch to Vercel fork
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout original repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 #get full history
+
+      - name: Push Main to fork
+        run: |
+          git remote add fork https://x-access-token:${FORK_PAT}@github.com/qweb-club/qweb-main-2024.git
+          git push fork main:main     
+
