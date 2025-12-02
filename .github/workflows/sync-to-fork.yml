@@ -13,12 +13,21 @@ jobs:
       - name: Checkout original repo
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 #get full history
+          fetch-depth: 0
+
+      - name: Debug PAT user and repo access
+        run: |
+          echo "Who am I (token user)?"
+          curl -s -H "Authorization: token $FORK_PAT" https://api.github.com/user | sed 's/"token":".*"/"token":"***"/'
+          echo
+          echo "Can I see the fork repo?"
+          curl -s -H "Authorization: token $FORK_PAT" https://api.github.com/repos/qweb-club/qweb-main-2024 | sed 's/"token":".*"/"token":"***"/'
+        env:
+          FORK_PAT: ${{ secrets.FORK_PAT }}
 
       - name: Push Main to fork
         run: |
           git remote add fork https://x-access-token:$FORK_PAT@github.com/qweb-club/qweb-main-2024.git
-          git push fork main:main     
-
+          git push fork main:main
         env:
           FORK_PAT: ${{ secrets.FORK_PAT }}
