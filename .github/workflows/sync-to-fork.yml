@@ -20,3 +20,5 @@ jobs:
           git remote add fork https://x-access-token:${FORK_PAT}@github.com/qweb-club/qweb-main-2024.git
           git push fork main:main     
 
+        env:
+          FORK_PAT: ${{ secrets.FORK_PAT }}
