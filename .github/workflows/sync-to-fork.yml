@@ -1,35 +1,33 @@
 name: Sync fork from upstream
 
 on:
-  # runs every 5 minutes (adjust as you like)
-  schedule:
-    - cron: '*/5 * * * *'
-  # so you can also run it manually from the Actions tab
-  workflow_dispatch: {}
+  workflow_dispatch: {}   # manual trigger
+  # Optional: also run automatically on a schedule
+  # schedule:
+  #   - cron: '*/10 * * * *'  # every 10 minutes
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # needed to push back to the fork
+      contents: write  # needed to push to this repo
 
     steps:
       - name: Checkout fork
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # full history so fast-forward works
+          fetch-depth: 0
 
       - name: Add upstream and fetch
         run: |
           git remote add upstream https://github.com/queens-web-development-club/qweb-main-2024.git
           git fetch upstream
 
-      - name: Fast-forward main from upstream/main
+      - name: Hard reset main to upstream/main
         run: |
           git checkout main
-          # try to fast-forward; if not possible (diverged), just exit without failing
-          git merge --ff-only upstream/main || exit 0
+          git reset --hard upstream/main
 
       - name: Push updated main back to fork
         run: |
-          git push origin main
+          git push origin main --force
