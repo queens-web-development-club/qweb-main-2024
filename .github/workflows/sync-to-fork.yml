@@ -1,24 +1,35 @@
-name: Sync main branch to Vercel fork
+name: Sync fork from upstream
 
 on:
-  push:
-    branches:
-      - main
+  # runs every 5 minutes (adjust as you like)
+  schedule:
+    - cron: '*/5 * * * *'
+  # so you can also run it manually from the Actions tab
+  workflow_dispatch: {}
 
 jobs:
   sync:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # needed to push back to the fork
 
     steps:
-      - name: Checkout original repo
-        uses: actions/checkout@v3
+      - name: Checkout fork
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 0 #get full history
+          fetch-depth: 0   # full history so fast-forward works
 
-      - name: Push Main to fork
+      - name: Add upstream and fetch
         run: |
-          git remote add fork https://x-access-token:$FORK_PAT@github.com/qweb-club/qweb-main-2024.git
-          git push fork main:main     
+          git remote add upstream https://github.com/queens-web-development-club/qweb-main-2024.git
+          git fetch upstream
 
-        env:
-          FORK_PAT: ${{ secrets.FORK_PAT }}
+      - name: Fast-forward main from upstream/main
+        run: |
+          git checkout main
+          # try to fast-forward; if not possible (diverged), just exit without failing
+          git merge --ff-only upstream/main || exit 0
+
+      - name: Push updated main back to fork
+        run: |
+          git push origin main
