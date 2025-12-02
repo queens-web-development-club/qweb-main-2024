@@ -2,8 +2,8 @@ name: Sync fork from upstream
 
 on:
   workflow_dispatch: {}
-  schedule:
-    - cron: "*/5 * * * *"  # every 5 minutes
+  repository_dispatch:
+    types: [sync-now]
 
 jobs:
   sync:
