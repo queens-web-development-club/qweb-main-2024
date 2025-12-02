@@ -1,10 +1,9 @@
 name: Sync fork from upstream
 
 on:
-  workflow_dispatch: {}   # manual trigger
-  # Optional: also run automatically on a schedule
-  # schedule:
-  #   - cron: '*/10 * * * *'  # every 10 minutes
+  workflow_dispatch: {}
+  schedule:
+    - cron: "*/5 * * * *"  # every 5 minutes
 
 jobs:
   sync:
